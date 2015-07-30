@@ -1,0 +1,145 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API Dashboard</title>
+    <link rel="stylesheet" href="css/foundation.css" />
+    <script src="js/vendor/modernizr.js"></script>
+</head>
+<body>
+
+<div class="contain-to-grid sticky">
+    <nav class="top-bar" data-topbar role="navigation" data-options="sticky_on: large">
+        <ul class="title-area">
+            <li class="name">
+                <h1><a href="#">Dashboard</a></h1>
+            </li>
+            <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+            <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+        </ul>
+
+        <section class="top-bar-section">
+            <!-- Left Nav Section -->
+            <ul class="right">
+                <li><a href="#">Options</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </section>
+    </nav>
+</div>
+
+<!--Main body-->
+<div class="row">
+    <br>
+    <!--Right grid-->
+    <div class="large-12 columns">
+
+        <!--Get-->
+        <div class="row">
+            <div class="large-6 columns">
+                <div class="panel">
+                    <h5>GET Bikes</h5>
+                    <!--Server response-->
+                    <div>
+                        <ul  id="get_response">
+
+                        </ul>
+                    </div>
+                    <hr>
+                    <a href="" id="btn_get" class="button">Get</a>
+                    <div id="error"></div>
+                </div>
+            </div>
+
+            <!--post grid-->
+            <div class="large-6 columns">
+                <div class="panel">
+                    <h5>POST New bike</h5>
+                    <form id="form_post">
+                        <div class="row">
+                            <div class="large-4 columns">
+                                <label>
+                                    <input id="bike_name" type="text" placeholder="Name" />
+                                </label>
+                            </div>
+                            <div class="large-4 columns">
+                                <label>
+                                    <input id="bike_type" type="text" placeholder="Type" />
+                                </label>
+                            </div>
+                            <div class="large-4 columns">
+                                <label>
+                                    <input id="bike_price" type="text" placeholder="Price" />
+                                </label>
+                            </div>
+                        </div>
+                        <hr>
+                        <a href="#" id="btn_post" class="button success">Post</a>
+                    </form>
+                </div>
+            </div>
+
+            <!--delete grid-->
+            <div class="large-6 columns">
+                <div class="panel">
+                    <h5>DELETE Bike</h5>
+                    <form id="form_delete">
+                        <div class="row">
+                            <div class="large-12 columns">
+                                <label>
+                                    <input id="bike_id" type="text" placeholder="Bike id" />
+                                </label>
+                            </div>
+                        </div>
+                        <hr>
+                        <a href="#" id="btn_delete" class="button alert">Delete</a>
+                    </form>
+                </div>
+            </div>
+
+            <!--Put grid-->
+            <div class="large-6 columns">
+                <div class="panel">
+                    <h5>PUT In a bike</h5>
+                    <form id="form_put">
+                        <div class="row">
+                            <div class="large-12 columns">
+                                <label>
+                                    <input id="bike_id_put" type="text" placeholder="Bike id" />
+                                </label>
+                            </div>
+                            <div class="large-4 columns">
+                                <label>
+                                    <input id="bike_name_put" type="text" placeholder="Change Name" />
+                                </label>
+                            </div>
+                            <div class="large-4 columns">
+                                <label>
+                                    <input id="bike_type_put" type="text" placeholder="Change Type" />
+                                </label>
+                            </div>
+                            <div class="large-4 columns">
+                                <label>
+                                    <input id="bike_price_put" type="text" placeholder="Change Price" />
+                                </label>
+                            </div>
+                        </div>
+                        <hr>
+                        <a href="#" id="btn_put" class="button success">Put</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/vendor/jquery.js"></script>
+<script src="js/foundation.min.js"></script>
+<script src="js/index.js"></script>
+
+<script>
+    $(document).foundation();
+</script>
+</body>
+</html>
